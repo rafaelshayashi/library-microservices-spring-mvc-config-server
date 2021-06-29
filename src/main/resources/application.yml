@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: git
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rafaelshayashi/library-ddd-by-example-spring-mvc-config-server-files
+          search-paths: '{application}/{profile}'
+        default-label: main
+
+encrypt:
+  key: MLo43M1G5lJ1FzhE5c4Ah3O^OwOhDlTv
